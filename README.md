@@ -61,7 +61,7 @@ sdk env
   - [log4j2](https://logging.apache.org/log4j/2.x)
   - Request & Response logging
 - [x] Git hooks
-- [ ] CI (Github Actions).
+- [x] CI (Github Actions).
 
 ## Quick run
 
