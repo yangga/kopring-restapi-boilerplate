@@ -1,0 +1,7 @@
+spring:
+  persistence:
+    sample:
+      host: localhost:3306
+      database: sample
+      user: root
+      password: root

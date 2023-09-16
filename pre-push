@@ -1,0 +1,17 @@
+#!/bin/bash
+
+source "$HOME/.sdkman/bin/sdkman-init.sh" || true
+sdk env || true
+
+echo "Printing java version"
+java --version
+
+echo "Running git pre-commit hook"
+
+./gradlew clean test
+
+RESULT=$?
+
+# return 1 exit code if running checks fails
+[ $RESULT -ne 0 ] && exit 1
+exit 0

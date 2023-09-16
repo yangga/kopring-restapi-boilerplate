@@ -1,0 +1,19 @@
+Configuration:
+  status: info
+  packages: org.apache.logging.log4j.core,io.sentry.log4j2
+  Appenders:
+    Console:
+      name: ConsoleAppender
+      target: SYSTEM_OUT
+      JsonTemplateLayout:
+        charset: UTF-8
+        eventTemplateUri: classpath:log4j2/log-layout.json
+    Sentry:
+      name: SentryAppender
+  Loggers:
+    Root:
+      level: info
+      AppenderRef:
+        - ref: ConsoleAppender
+        - ref: SentryAppender
+          level: debug
