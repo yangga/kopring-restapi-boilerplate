@@ -2,8 +2,7 @@ name: Build and Test Java Spring Boot Application
 
 on:
   push:
-#    branches: [ "main" ]
-    branches: ["*"]
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
